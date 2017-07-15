@@ -44,10 +44,12 @@ body {
 }
 
 #answer {
-  width: 480px;
+  width: 454px;
   background-color: pink;
   font-size: 56px;
   color: white;
+  text-align-last: end;
+  padding-right: 26px;
 }
 
 #secondRow {

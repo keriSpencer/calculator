@@ -28,6 +28,11 @@ let fifthRowElement2
 let fifthRowElement3
 let fifthRowElement4
 
+let clickButton = function(e) {
+  topRowElement2.value += e.target.innerHTML
+  console.log(e.target.innerHTML)
+}
+
 // Div for entire Calculator body
 calcBody = document.getElementById('calcGrid')
 
@@ -44,12 +49,13 @@ topRowElement1.id = 'clear'
 topRowElement1.input = 'text'
 topRowElement1.className = 'topRowClass elementsText'
 topRowElement1.innerHTML = 'C'
+topRowElement1.addEventListener('click', clickButton)
 topRow.appendChild(topRowElement1)
 
 topRowElement2 = document.createElement('input')
 topRowElement2.id = 'answer'
 topRowElement2.className = 'topRowClass'
-// topRowElement1.className = 'elementsText'
+topRowElement2.value = ''
 topRow.appendChild(topRowElement2)
 
 // Div for Second Row
@@ -63,24 +69,28 @@ secondRowElement1 = document.createElement('button')
 secondRowElement1.id = 'seven'
 secondRowElement1.className = 'secondRowClass elementsText'
 secondRowElement1.innerHTML = '7'
+secondRowElement1.addEventListener('click', clickButton)
 secondRow.appendChild(secondRowElement1)
 
 secondRowElement2 = document.createElement('button')
 secondRowElement2.id = 'eight'
 secondRowElement2.className = 'secondRowClass elementsText'
 secondRowElement2.innerHTML = '8'
+secondRowElement2.addEventListener('click', clickButton)
 secondRow.appendChild(secondRowElement2)
 
 secondRowElement3 = document.createElement('button')
 secondRowElement3.id = 'nine'
 secondRowElement3.className = 'secondRowClass elementsText'
 secondRowElement3.innerHTML = '9'
+secondRowElement3.addEventListener('click', clickButton)
 secondRow.appendChild(secondRowElement3)
 
 secondRowElement4 = document.createElement('button')
 secondRowElement4.id = 'divide'
 secondRowElement4.className = 'secondRowClass elementsText'
 secondRowElement4.innerHTML = '/'
+secondRowElement4.addEventListener('click', clickButton)
 secondRow.appendChild(secondRowElement4)
 
 // Div for Third Row
@@ -94,24 +104,28 @@ thirdRowElement1 = document.createElement('button')
 thirdRowElement1.id = 'four'
 thirdRowElement1.className = 'thirdRowClass elementsText'
 thirdRowElement1.innerHTML = '4'
+thirdRowElement1.addEventListener('click', clickButton)
 thirdRow.appendChild(thirdRowElement1)
 
 thirdRowElement2 = document.createElement('button')
 thirdRowElement2.id = 'five'
 thirdRowElement2.className = 'thirdRowClass elementsText'
 thirdRowElement2.innerHTML = '5'
+thirdRowElement2.addEventListener('click', clickButton)
 thirdRow.appendChild(thirdRowElement2)
 
 thirdRowElement3 = document.createElement('button')
 thirdRowElement3.id = 'six'
 thirdRowElement3.className = 'thirdRowClass elementsText'
 thirdRowElement3.innerHTML = '6'
+thirdRowElement3.addEventListener('click', clickButton)
 thirdRow.appendChild(thirdRowElement3)
 
 thirdRowElement4 = document.createElement('button')
 thirdRowElement4.id = 'multiply'
 thirdRowElement4.className = 'thirdRowClass elementsText'
 thirdRowElement4.innerHTML = '*'
+thirdRowElement4.addEventListener('click', clickButton)
 thirdRow.appendChild(thirdRowElement4)
 
 // Div for Fourth Row
@@ -125,24 +139,28 @@ fourthRowElement1 = document.createElement('button')
 fourthRowElement1.id = 'one'
 fourthRowElement1.className = 'fourthRowClass elementsText'
 fourthRowElement1.innerHTML = '1'
+fourthRowElement1.addEventListener('click', clickButton)
 fourthRow.appendChild(fourthRowElement1)
 
 fourthRowElement2 = document.createElement('button')
 fourthRowElement2.id = 'two'
 fourthRowElement2.className = 'fourthRowClass elementsText'
 fourthRowElement2.innerHTML = '2'
+fourthRowElement2.addEventListener('click', clickButton)
 fourthRow.appendChild(fourthRowElement2)
 
 fourthRowElement3 = document.createElement('button')
 fourthRowElement3.id = 'three'
 fourthRowElement3.className = 'fourthRowClass elementsText'
 fourthRowElement3.innerHTML = '3'
+fourthRowElement3.addEventListener('click', clickButton)
 fourthRow.appendChild(fourthRowElement3)
 
 fourthRowElement4 = document.createElement('button')
 fourthRowElement4.id = 'minus'
 fourthRowElement4.className = 'fourthRowClass elementsText'
 fourthRowElement4.innerHTML = '-'
+fourthRowElement4.addEventListener('click', clickButton)
 fourthRow.appendChild(fourthRowElement4)
 
 // Div for Fifth Row
@@ -156,32 +174,28 @@ fifthRowElement1 = document.createElement('button')
 fifthRowElement1.id = 'zero'
 fifthRowElement1.className = 'fifthRowClass elementsText'
 fifthRowElement1.innerHTML = '0'
+fifthRowElement1.addEventListener('click', clickButton)
 fifthRow.appendChild(fifthRowElement1)
 
 fifthRowElement2 = document.createElement('button')
 fifthRowElement2.id = 'dot'
 fifthRowElement2.className = 'fifthRowClass elementsText'
 fifthRowElement2.innerHTML = '.'
+fifthRowElement2.addEventListener('click', clickButton)
 fifthRow.appendChild(fifthRowElement2)
 
 fifthRowElement3 = document.createElement('button')
 fifthRowElement3.id = 'equals'
 fifthRowElement3.className = 'fifthRowClass elementsText'
 fifthRowElement3.innerHTML = '='
+fifthRowElement3.addEventListener('click', clickButton)
 fifthRow.appendChild(fifthRowElement3)
 
 fifthRowElement4 = document.createElement('button')
 fifthRowElement4.id = 'plus'
 fifthRowElement4.className = 'fifthRowClass elementsText'
 fifthRowElement4.innerHTML = '+'
+fifthRowElement4.addEventListener('click', clickButton)
 fifthRow.appendChild(fifthRowElement4)
-
-// console.log when button is pushed
-
-function clicked() {
-  var num = 7
-}
-
-console.log(clicked())
 
 //
