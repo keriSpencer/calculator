@@ -28,10 +28,60 @@ let fifthRowElement2
 let fifthRowElement3
 let fifthRowElement4
 
-let clickButton = function(e) {
-  topRowElement2.value += e.target.innerHTML
-  console.log(e.target.innerHTML)
+let stringToArray = function(string) {
+  for (i in string) {
+    if (isNaN(string[i])) {
+      let numbers = string.split(string[i])
+      numbers.push(string[i])
+      return numbers
+    }
+  }
 }
+
+let add = function(a, b) {
+  topRowElement2.value = parseInt(a) + parseInt(b)
+}
+
+let subtract = function(a, b) {
+  topRowElement2.value = parseInt(a) - parseInt(b)
+}
+
+let multiply = function(a, b) {
+  topRowElement2.value = parseInt(a) * parseInt(b)
+}
+
+let divide = function(a, b) {
+  topRowElement2.value = parseInt(a) / parseInt(b)
+}
+
+let clickButton = function(e) {
+  if (e.target.innerHTML === 'C') {
+    topRowElement2.value = ''
+  } else {
+    if (e.target.innerHTML === '=') {
+      let answer = topRowElement2.value
+      let arrayOfNumbers = stringToArray(answer)
+      if (arrayOfNumbers[2] === '+') {
+        add(arrayOfNumbers[0], arrayOfNumbers[1])
+      } else if (arrayOfNumbers[2] === '-') {
+        subtract(arrayOfNumbers[0], arrayOfNumbers[1])
+      } else if (arrayOfNumbers[2] === '/') {
+        divide(arrayOfNumbers[0], arrayOfNumbers[1])
+      } else {
+        multiply(arrayOfNumbers[0], arrayOfNumbers[1])
+      }
+      console.log(arrayOfNumbers)
+    } else {
+      topRowElement2.value += e.target.innerHTML
+    }
+  }
+}
+//
+// let divide = function() {
+//   if (secondRowElement4.id = 'divide') {
+//     topRowElement2.value /= topRowElement2.value
+//   }
+// }
 
 // Div for entire Calculator body
 calcBody = document.getElementById('calcGrid')
@@ -50,6 +100,7 @@ topRowElement1.input = 'text'
 topRowElement1.className = 'topRowClass elementsText'
 topRowElement1.innerHTML = 'C'
 topRowElement1.addEventListener('click', clickButton)
+// topRowElement1.reset()
 topRow.appendChild(topRowElement1)
 
 topRowElement2 = document.createElement('input')
@@ -124,7 +175,7 @@ thirdRow.appendChild(thirdRowElement3)
 thirdRowElement4 = document.createElement('button')
 thirdRowElement4.id = 'multiply'
 thirdRowElement4.className = 'thirdRowClass elementsText'
-thirdRowElement4.innerHTML = '*'
+thirdRowElement4.innerHTML = 'X'
 thirdRowElement4.addEventListener('click', clickButton)
 thirdRow.appendChild(thirdRowElement4)
 
@@ -189,6 +240,7 @@ fifthRowElement3.id = 'equals'
 fifthRowElement3.className = 'fifthRowClass elementsText'
 fifthRowElement3.innerHTML = '='
 fifthRowElement3.addEventListener('click', clickButton)
+
 fifthRow.appendChild(fifthRowElement3)
 
 fifthRowElement4 = document.createElement('button')
