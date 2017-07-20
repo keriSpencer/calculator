@@ -1,46 +1,25 @@
 body {
   display: flex;
-  /*background-color: yellow;*/
   flex-direction: row;
   height: auto;
   justify-content: center;
   margin: 0;
-  /*width: 900px;*/
 }
 
 #calcGrid {
   margin-top: 3em;
   width: 900px;
   height: 900px;
-  /*background-color: green;*/
 }
 
-#topRow {
-  margin: 0 0 0 15%;
-  padding: 0;
-  width: 72%;
-  height: 10em;
-
-  /*height: 450px;*/
-  /*background-color: green;*/
-  display: flex;
-  flex-direction: row;
-  color: white;
-  text-align: center;
-}
-
-/*.topRowClass {
-  width: 72%;
-  height: 10em;
-  background-color: red;
-  color: white;
-}*/
-
-#clear {
-  /*height: 10em;*/
-  width: 4.4em;
-  background-color: pink;
-  margin: 0 0 .1em .1em;
+#clear:hover,
+#plus:hover,
+#minus:hover,
+#divide:hover,
+#multiply:hover,
+#equals:hover {
+  background-color: #e80c7a;
+  color: #424143;
 }
 
 #answer {
@@ -52,169 +31,22 @@ body {
   padding-right: 26px;
 }
 
-#secondRow {
-  margin: 0 0 0 15%;
-  padding: 0;
-  width: 72%;
-  height: 10em;
-
-  /*height: 450px;*/
-  /*background-color: green;*/
-  display: flex;
-  flex-direction: row;
-  color: white;
-  text-align: center;
-}
-
-#seven {
-  /*height: 10em;*/
-  width: 14em;
-  background-color: pink;
-  margin: 0 0 .1em .1em;
-}
-
-#eight {
-  /*height: 10em;*/
-  width: 14em;
-  background-color: pink;
-  margin: 0 0 .1em .1em;
-}
-
-#nine {
-  /*height: 10em;*/
-  width: 14em;
-  background-color: pink;
-  margin: 0 0 .1em .1em;
-}
-
-#divide {
-  /*height: 10em;*/
-  width: 14em;
-  background-color: pink;
-  margin: 0 0 .1em .1em;
-}
-
-#thirdRow {
-  margin: 0 0 0 15%;
-  padding: 0;
-  width: 72%;
-  height: 10em;
-
-  /*height: 450px;*/
-  /*background-color: green;*/
-  display: flex;
-  flex-direction: row;
-  color: white;
-  text-align: center;
-}
-
-#four {
-  /*height: 10em;*/
-  width: 14em;
-  background-color: pink;
-  margin: 0 0 .1em .1em;
-}
-
-#five {
-  /*height: 10em;*/
-  width: 14em;
-  background-color: pink;
-  margin: 0 0 .1em .1em;
-}
-
-#six {
-  /*height: 10em;*/
-  width: 14em;
-  background-color: pink;
-  margin: 0 0 .1em .1em;
-}
-
-#multiply {
-  /*height: 10em;*/
-  width: 14em;
-  background-color: pink;
-  margin: 0 0 .1em .1em;
-}
-
-#fourthRow {
-  margin: 0 0 0 15%;
-  padding: 0;
-  width: 72%;
-  height: 10em;
-
-  /*height: 450px;*/
-  /*background-color: green;*/
-  display: flex;
-  flex-direction: row;
-  color: white;
-  text-align: center;
-}
-
-#one {
-  /*height: 10em;*/
-  width: 14em;
-  background-color: pink;
-  margin: 0 0 .1em .1em;
-}
-
-#two {
-  /*height: 10em;*/
-  width: 14em;
-  background-color: pink;
-  margin: 0 0 .1em .1em;
-}
-
-#three {
-  /*height: 10em;*/
-  width: 14em;
-  background-color: pink;
-  margin: 0 0 .1em .1em;
-}
-
-#minus {
-  /*height: 10em;*/
-  width: 14em;
-  background-color: pink;
-  margin: 0 0 .1em .1em;
-}
-
+#topRow,
+#secondRow,
+#thirdRow,
+#fourthRow,
 #fifthRow {
   margin: 0 0 0 15%;
   padding: 0;
   width: 72%;
   height: 10em;
-
-  /*height: 450px;*/
-  /*background-color: green;*/
   display: flex;
   flex-direction: row;
   color: white;
   text-align: center;
 }
 
-#zero {
-  /*height: 10em;*/
-  width: 14em;
-  background-color: pink;
-  margin: 0 0 .1em .1em;
-}
-
-#dot {
-  /*height: 10em;*/
-  width: 14em;
-  background-color: pink;
-  margin: 0 0 .1em .1em;
-}
-
-#equals {
-  /*height: 10em;*/
-  width: 14em;
-  background-color: pink;
-  margin: 0 0 .1em .1em;
-}
-
-#plus {
-  /*height: 10em;*/
+.elementsText {
   width: 14em;
   background-color: pink;
   margin: 0 0 .1em .1em;

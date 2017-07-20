@@ -76,12 +76,6 @@ let clickButton = function(e) {
     }
   }
 }
-//
-// let divide = function() {
-//   if (secondRowElement4.id = 'divide') {
-//     topRowElement2.value /= topRowElement2.value
-//   }
-// }
 
 // Div for entire Calculator body
 calcBody = document.getElementById('calcGrid')
@@ -93,10 +87,33 @@ topRow.input = 'text'
 topRow.className = 'RowClass'
 calcBody.appendChild(topRow)
 
+// Div for Second Row
+secondRow = document.createElement('div')
+secondRow.id = 'secondRow'
+secondRow.className = 'RowClass'
+calcBody.appendChild(secondRow)
+
+// Div for Third Row
+thirdRow = document.createElement('div')
+thirdRow.id = 'thirdRow'
+thirdRow.className = 'RowClass'
+calcBody.appendChild(thirdRow)
+
+// Div for Fourth Row
+fourthRow = document.createElement('div')
+fourthRow.id = 'fourthRow'
+fourthRow.className = 'RowClass'
+calcBody.appendChild(fourthRow)
+
+// Div for Fifth Row
+fifthRow = document.createElement('div')
+fifthRow.id = 'fifthRow'
+fifthRow.className = 'RowClass'
+calcBody.appendChild(fifthRow)
+
 // Nested Div for top row
 topRowElement1 = document.createElement('button')
 topRowElement1.id = 'clear'
-topRowElement1.input = 'text'
 topRowElement1.className = 'topRowClass elementsText'
 topRowElement1.innerHTML = 'C'
 topRowElement1.addEventListener('click', clickButton)
@@ -108,12 +125,6 @@ topRowElement2.id = 'answer'
 topRowElement2.className = 'topRowClass'
 topRowElement2.value = ''
 topRow.appendChild(topRowElement2)
-
-// Div for Second Row
-secondRow = document.createElement('div')
-secondRow.id = 'secondRow'
-secondRow.className = 'RowClass'
-calcBody.appendChild(secondRow)
 
 // Nested Div for second row
 secondRowElement1 = document.createElement('button')
@@ -144,12 +155,6 @@ secondRowElement4.innerHTML = '/'
 secondRowElement4.addEventListener('click', clickButton)
 secondRow.appendChild(secondRowElement4)
 
-// Div for Third Row
-thirdRow = document.createElement('div')
-thirdRow.id = 'thirdRow'
-thirdRow.className = 'RowClass'
-calcBody.appendChild(thirdRow)
-
 // Nested Div for third row
 thirdRowElement1 = document.createElement('button')
 thirdRowElement1.id = 'four'
@@ -179,12 +184,6 @@ thirdRowElement4.innerHTML = 'X'
 thirdRowElement4.addEventListener('click', clickButton)
 thirdRow.appendChild(thirdRowElement4)
 
-// Div for Fourth Row
-fourthRow = document.createElement('div')
-fourthRow.id = 'fourthRow'
-fourthRow.className = 'RowClass'
-calcBody.appendChild(fourthRow)
-
 // Nested Div for fourth row
 fourthRowElement1 = document.createElement('button')
 fourthRowElement1.id = 'one'
@@ -213,12 +212,6 @@ fourthRowElement4.className = 'fourthRowClass elementsText'
 fourthRowElement4.innerHTML = '-'
 fourthRowElement4.addEventListener('click', clickButton)
 fourthRow.appendChild(fourthRowElement4)
-
-// Div for Fifth Row
-fifthRow = document.createElement('div')
-fifthRow.id = 'fifthRow'
-fifthRow.className = 'RowClass'
-calcBody.appendChild(fifthRow)
 
 // Nested Div for fifth row
 fifthRowElement1 = document.createElement('button')
